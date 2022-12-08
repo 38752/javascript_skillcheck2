@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: javascript_skillcheck_development
+  database: javascript_skillcheck2_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: javascript_skillcheck_test
+  database: javascript_skillcheck2_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: javascript_skillcheck_production
-  username: javascript_skillcheck
-  password: <%= ENV['JAVASCRIPT_SKILLCHECK_DATABASE_PASSWORD'] %>
+  database: javascript_skillcheck2_production
+  username: javascript_skillcheck2
+  password: <%= ENV['JAVASCRIPT_SKILLCHECK2_DATABASE_PASSWORD'] %>

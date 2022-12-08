@@ -14,6 +14,8 @@ ActiveRecord::Schema.define(version: 2020_04_18_065150) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.text "text"
+    t.integer "deletepass"
+    t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
