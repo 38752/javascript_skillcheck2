@@ -1,3 +1,8 @@
 <div class="article">
-  <%= article.text %>
+  <div class="article-created_at"><%= article.created_at %></div>
+  <% if article.status == 1  %>
+    <div><%= article.text %></div>
+  <% else %>
+    <div style="color: #bbb;">この投稿は削除されました</div>
+  <% end %>
 </div>

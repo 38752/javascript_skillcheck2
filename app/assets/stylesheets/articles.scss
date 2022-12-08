@@ -28,6 +28,7 @@ body {
   position: fixed;
   top: 0;
   background-color: $header_color;
+  padding-left: 10px;
   color: #bbb;
   line-height: 70px;
   font-size: 50px;
@@ -51,7 +52,11 @@ body {
     border: 1px solid #666;
     text-align: left;
     border-radius: 5px;
-    color: #444;
+    color: #222;
+  }
+  .article-created_at{
+    color: #111;
+    font-size: 10px;
   }
   .article:last-child {
     margin-bottom: 30px;
@@ -69,7 +74,7 @@ body {
     height: 30px;
     width: 80%;
     margin-left: 10%;
-    margin-top: 20px;
+    margin-top: 10px;
 
     .article_form {
       height: 30px;
@@ -82,6 +87,17 @@ body {
     #char_num {
       display: inline-block;
       color: #eee;
+    }
+
+    .deletepass {
+      display: inline-block;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 10;
+    }
+    .article_code {
+      height: 20px;
+      width: 40px;
     }
     input[type="submit"] {
       border-style: none;

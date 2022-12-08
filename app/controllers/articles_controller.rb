@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   def index
+    # @articles = Article.where('status',1).order("id DESC")
     @articles = Article.order("id DESC")
     @article = Article.new
   end
@@ -10,12 +11,17 @@ class ArticlesController < ApplicationController
   def create
     article = Article.new(article_params)
     if article.save
-      redirect_to index 
+      render json:{ article: article}
     end
   end
 
   private
   def article_params
-    params.require(:article).permit(:text)
+    # binding.pry
+    if params[:article][:deletepass].match(/\A\d{0,4}\z/)
+      params.require(:article).permit(:text, :deletepass).merge(status: 1)
+    else
+      params.require(:article).permit(:text).merge(status: 1)
+    end
   end
 end

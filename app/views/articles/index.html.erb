@@ -13,6 +13,10 @@
       <div id="char_num">
         0文字
       </div>
+      <div class="deletepass">
+        <div>削除コード</div>
+        <%= f.text_field :deletepass, class: "article_code", id: "article_code", maxlength: "4" %>
+      </div>
       <%= f.submit "POST" , id: "submit_btn"%>
     <% end %>
   </div>
